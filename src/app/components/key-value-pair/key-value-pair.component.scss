@@ -1,0 +1,10 @@
+.key-value-pair {
+  display: inline-flex;
+  flex-direction: column;
+  & > [key] {
+    font-weight: 700;
+  }
+  & > [value] {
+    font-weight: 400;
+  }
+}

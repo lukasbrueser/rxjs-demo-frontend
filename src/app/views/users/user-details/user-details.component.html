@@ -1,0 +1,14 @@
+<ng-container *ngIf="vm$ | async as vm">
+  <ng-container *ngIf="vm.loading">
+    <mat-spinner class="loading-spinner" @fade></mat-spinner>
+  </ng-container>
+  <ng-container *ngIf="!vm.loading && vm.user">
+    <app-user-details-card [user]="vm.user" @fade></app-user-details-card>
+  </ng-container>
+  <ng-container *ngIf="!vm.loading && error">
+    <div class="error" @fade>
+      <h2>{{ error.status }} {{ error.title }}</h2>
+      <span> {{ error.detail }}</span>
+    </div>
+  </ng-container>
+</ng-container>

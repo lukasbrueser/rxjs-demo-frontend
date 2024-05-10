@@ -1,0 +1,25 @@
+<div class="user-details-card__content" *ngIf="user">
+  <h2 class="user-details-card__content__heading">Details</h2>
+  <div class="user-details-card__content__grid">
+    <app-key-value-pair>
+      <span key>Username</span>
+      <span value>{{ user.username }}</span>
+    </app-key-value-pair>
+    <app-key-value-pair>
+      <span key>First name</span>
+      <span value>{{ user.firstName }}</span>
+    </app-key-value-pair>
+    <app-key-value-pair>
+      <span key>Last name</span>
+      <span value>{{ user.lastName }}</span>
+    </app-key-value-pair>
+    <app-key-value-pair>
+      <span key>Age</span>
+      <span value>{{ user.age }}</span>
+    </app-key-value-pair>
+    <app-key-value-pair>
+      <span key>Eye color</span>
+      <span value>{{ user.eyeColor | eyeColorEnum }}</span>
+    </app-key-value-pair>
+  </div>
+</div>
